@@ -20,7 +20,7 @@ const filesToCopyFromArchive = [
   'test/util/remote-test.js',
   'test/util/hookStdOut.js',
   '.eslintrc',
-  'test/grad-assessment-mod-0.js',
+  'test/app-assessment-mod-0.js',
 ];
 
 /**

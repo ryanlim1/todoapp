@@ -2,7 +2,7 @@
 
 
 ## Summary
-You will be building a very simple To-Do application. This application will include the ability to:
+This assessment will combine much of what you have encountered during the units at Codesmith. You will be building a very simple To-Do application. This application will include the ability to:
 
 - log in to a protected page
 - retrieve and display a list of tasks from a database
@@ -24,7 +24,7 @@ You are not given any code to test your application, but we will run tests on yo
 
 ## Serving the files
 For this part you will be editing the `server/server.js` file.
-- [ ] Create a Node.js HTTP server that listens on port **3333**. (You may use Express if you'd like, but it is not necessary.)
+- [ ] Create a Node.js HTTP server that listens on port 3333. (You may use Express if you'd like, but it is not necessary.)
 - [ ] When you visit `http://localhost:3333/` in the browser, it should serve the `index.html` file from the `views` folder. This is the login page for the application.
 - [ ] When you visit `http://localhost:3333/secret` in the browser, you should render the `secret.html` file from the `views` folder. This is the To-Do application
 - [ ] You should also serve the CSS and JS that the html files are requesting. These are located in the `assets` folder. Make sure the `Content-Type` header is getting properly set in the HTTP response. (Some methods from some frameworks infer the content type from the file extension and set the header automatically.)

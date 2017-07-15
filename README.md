@@ -16,8 +16,9 @@ You are not given any code to test your application, but we will run tests on yo
 
 - While you are free to add any additional files you want, **do not edit the file structure or delete existing files**
 - Likewise you can add additional HTML elements, IDs, and classes, but **do not remove existing hardcoded HTML elements/attributes**
-- If you are told to send or display a certain string or to name a file or function a certain name, copy-paste the string **exactly** as it is shown. Alternate text or differing capitalization will fail the tests.
+- If you are told to send or display a certain string or to name a file or function a certain name, copy-paste the string **exactly** as it is shown. Alternate text or differing capitalization will fail the tests
 - Run your server and test out your application before submitting! Even if things are not working 100% correctly, you should be able to catch and remove any syntax or reference errors just by running your application
+- Testing your database work requires somewhat odd syntax. **Pay careful attention to the notes regarding this below!**
 - You are free to edit the stylesheet as you please!
 
 
@@ -32,13 +33,13 @@ For this part you will be editing the `server/server.js` file.
 
 
 ## Task Database
-Your To-Do application would be useless without a database to hold onto the tasks between sessions.
+Your To-Do application would be useless without a database to hold onto the tasks between sessions. To test your code, we will run it on a database we have created. This is why the `TaskModel` file looks a little odd. Please put the URI of the database you will be using (local or cloud hosted) in the `myURI` variable. Then uncomment out either the line mentioning MONGO_URI (if you're using MongoDB/Mongoose) **OR** the line mentioning PG_URI (if you're using PostgresQL/Sequelize). If your personal URI contains sensitive information (the password), feel free to replace `myURI` when you are ready to commit. We will not be testing your personal database, so we do not need to connect to it.
 
 #### Task Model
-In the `server/models/TaskModel.js` file, implement a database in either MongoDB or PostgresQL (Mongoose/Sequelize optional) as follows:
+In the `server/models/TaskModel.js` file, implement a database in either MongoDB or PostgresQL (Mongoose/Sequelize optional) as described below:
 - [ ] We want to store our data in a collection/table called `Task`. (Remember, this may be created as the plural `Tasks` - that is fine.)
 - [ ] All items in the database must have a property `item` which is a string
-- [ ] Additionally, all items should be stored with the time they were `created_at`. This should default to now
+- [ ] Additionally, all items should be stored with the time they were `created_at`. This should default to the current time
 
 #### Task controllers
 In the `server/models/taskController.js` file, add the following functionality to the exported controller. (These will be server middleware/final handler functions, so they should take the appropriate parameters and perform the necessary callback operations.):

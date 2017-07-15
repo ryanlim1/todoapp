@@ -28,6 +28,7 @@ const filesToCopyFromArchive = [
 */
 function copyFileFromArchive(path, next) {
   github.fileContents({ path, repo: 'assessments-archive' }, (err, res, body) => {
+    if (err) console.log('Error in github.fileContents:', err);
     const buf = new Buffer(body.content, 'base64');
 
     const filepath = `${__dirname}/${body.name}`;

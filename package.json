@@ -11,6 +11,7 @@
   "author": "Brandon Mizuno",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^7.17.0",
     "nodemon": "^2.0.7"
   }
 }

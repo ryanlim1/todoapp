@@ -17,6 +17,10 @@ if (pull === 'false') {
   process.exit(0);
 } else {
   github.pullInfo({ repo, pull }, (err, res, body) => {
+    if (!body.user || !body.head) {
+      console.log('Could not get pull request data:', body);
+      process.exit(1);
+    }
     if (body.user.login !== body.base.ref) {
       console.log('Must pull to correct branch name. Exiting.');
       process.exit(1);
